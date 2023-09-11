@@ -177,6 +177,11 @@ a.button.secondary, button.secondary {
 }
 
 /* My button styles start */
+a.button:any-link {
+  transition: background-color .25s,
+              color .25s,
+              border-color .25s;
+}
 
 a.primary:any-link {
   background-color: green;
@@ -187,12 +192,11 @@ a.primary:hover, a.primary:focus {
   cursor: pointer;
 }
 
-a.secondary:hover {
+a.secondary:hover, a.secondary:focus {
   background-color: black;
   color: white;
   border-color: gray;
 }
-
 /* My button styles end */
 
 main input {
