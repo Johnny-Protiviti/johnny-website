@@ -176,6 +176,25 @@ a.button.secondary, button.secondary {
   color: var(--text-color)
 }
 
+/* My button styles start */
+
+a.primary:any-link {
+  background-color: green;
+}
+
+a.primary:hover, a.primary:focus {
+  background-color: red;
+  cursor: pointer;
+}
+
+a.secondary:hover {
+  background-color: black;
+  color: white;
+  border-color: gray;
+}
+
+/* My button styles end */
+
 main input {
   font-size: 1.25rem;
   width: 100%;
