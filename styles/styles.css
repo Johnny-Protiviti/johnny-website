@@ -187,9 +187,19 @@ a.primary:any-link {
   background-color: green;
 }
 
+a.johnniary:any-link {
+  background-color: black;
+}
+
 a.primary:hover, a.primary:focus {
   background-color: red;
   cursor: pointer;
+}
+
+a.johnniary:hover, a.johnniary:focus {
+  color: black;
+  background-color: white;
+  border-color: gray;
 }
 
 a.secondary:hover, a.secondary:focus {
