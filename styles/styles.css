@@ -304,8 +304,9 @@ a.button:any-link svg {
   fill: var(--link-color);
 }
 
-a.button:any-link svg {
-  stroke: var(--background-color);
+a.button:any-link path {
+  fill: var(--background-color);
+  fill: red;
 }
 
 a.johnniary:hover svg {
