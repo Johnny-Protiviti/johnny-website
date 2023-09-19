@@ -283,10 +283,14 @@ main .section.highlight {
   background-color: var(--highlight-background-color);
 }
 
-main .section.johnny-section {
+main .section.first-test-section {
+  background-color: cornsilk;
+}
+
+main .section.johnny-test-section {
   background-color: aliceblue;
 }
 
-main .section.another-section {
+main .section.another-test-section {
   background-color: beige;
 }
