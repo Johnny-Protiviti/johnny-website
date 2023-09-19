@@ -294,3 +294,20 @@ main .section.johnny-test-section {
 main .section.another-test-section {
   background-color: beige;
 }
+
+/* My SVG styles*/
+a.button:any-link svg {
+  transition: stroke .25s;
+}
+
+.faketest a:any-link svg {
+  fill: var(--link-color);
+}
+
+a.button:any-link svg {
+  stroke: var(--background-color);
+}
+
+a.johnniary:hover svg {
+  stroke: black;
+}
