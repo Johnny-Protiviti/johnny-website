@@ -142,7 +142,9 @@ a:hover {
 /* buttons */
 a.button:any-link, button {
   font-family: var(--body-font-family);
-  display: inline-block;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
   box-sizing: border-box;
   text-decoration: none;
   border: 2px solid transparent;
@@ -298,16 +300,19 @@ main .section.another-test-section {
 /* My SVG styles*/
 a.button:any-link svg {
   transition: stroke .25s;
+  stroke: currentColor;
+  fill: currentColor;
 }
 
 .faketest a:any-link svg {
   fill: var(--link-color);
 }
 
-a.button:any-link path {
+/* a.button:any-link svg {
   fill: var(--background-color);
   fill: red;
-}
+  fill: inherit;
+} */
 
 a.johnniary:hover svg {
   stroke: black;
