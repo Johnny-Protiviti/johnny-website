@@ -36,6 +36,7 @@
 
 .col-color .columns > div > div {
   background-color: aliceblue;
+  color: red;
 }
 
 .col-color .columns-2-cols > div > div:first-of-type {
