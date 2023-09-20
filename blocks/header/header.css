@@ -280,7 +280,9 @@ header {
   .nav-sections {
     .nav-drop:nth-child(3) {
       & li:nth-child(3) {
-        color: red;
+        & a {
+          color: red;
+        }
       }
     }
   }
