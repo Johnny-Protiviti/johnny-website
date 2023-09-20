@@ -31,3 +31,13 @@
     order: unset;
   }
 }
+
+/* My columns styles */
+
+.col-color .columns > div > div {
+  background-color: aliceblue;
+}
+
+.col-color .columns-2-cols > div > div {
+  background-color: antiquewhite;
+}
