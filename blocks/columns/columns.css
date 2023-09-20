@@ -33,9 +33,6 @@
 }
 
 /* My columns styles */
-.col-color .columns > div:nth-child(even) > div:nth-child(odd) p {
-  color: green;
-}
 
 .col-color .columns > div:nth-child(even) > div:nth-child(odd),
 .col-color .columns > div:nth-child(odd) > div:nth-child(even) {
