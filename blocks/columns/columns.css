@@ -55,11 +55,11 @@
 }
 
 @media (max-width:901px) {
-  .col-color .columns-2-col > div > div:nth-child(odd) {
+  .col-color .columns-2-cols > div > div:nth-child(odd) {
     background-color: antiquewhite;
   }
   
-  .col-color .columns-2-col > div > div:nth-child(even) {
+  .col-color .columns-2-cols > div > div:nth-child(even) {
     background-color: aliceblue;
   }
 }
