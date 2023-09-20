@@ -38,6 +38,6 @@
   background-color: aliceblue;
 }
 
-.col-color .columns-2-cols > div > div {
+.col-color .columns-2-cols > div > div:first-of-type {
   background-color: antiquewhite;
 }
