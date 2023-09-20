@@ -282,7 +282,9 @@ header {
       & li:nth-child(3) {
         & a {
           display: flex;
-          transition: translate ease-in .5s;
+        }
+        & svg {
+          transition: translate .5s;
         }
         & a:hover {
           & svg {
