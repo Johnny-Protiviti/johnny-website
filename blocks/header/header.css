@@ -278,6 +278,8 @@ header nav .nav-tools {
 
 header {
   .nav-sections {
-    color: red;
+    & .nav-drop:nth-child(even) {
+      color: red;
+    }
   }
 }
