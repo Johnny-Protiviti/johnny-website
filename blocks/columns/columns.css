@@ -66,9 +66,7 @@
   .col-color .columns-2-cols > div:nth-child(odd) > div:nth-child(even) {
     background-color: aliceblue;
   }
-}
 
-@media (max-width:899px) {
   .col-color .columns-4-cols > div:nth-child(even) > div:nth-child(odd) {
     background-color: antiquewhite;
   }
