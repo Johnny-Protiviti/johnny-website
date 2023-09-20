@@ -37,6 +37,10 @@
 .col-color .columns > div:nth-child(even) > div:nth-child(odd),
 .col-color .columns > div:nth-child(odd) > div:nth-child(even) {
   background-color: aliceblue;
+
+  & p {
+    color: red;
+  }
 }
 
 .col-color .columns > div:nth-child(even) > div:nth-child(even),
