@@ -281,7 +281,7 @@ header {
     .nav-drop:nth-child(3) {
       & li:nth-child(3) {
         & a {
-          color: red;
+          display: flex;
         }
       }
     }
