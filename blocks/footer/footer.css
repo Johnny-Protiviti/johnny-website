@@ -2,11 +2,23 @@ footer {
   padding: 2rem;
   background-color: var(--overlay-background-color);
   font-size: var(--body-font-size-s);
+
+  .icon {
+    width: 145px;
+    height: 25px;
+  }
 }
 
 footer .footer {
   max-width: 1200px;
   margin: auto;
+
+  & > div {
+    & > div {
+      display: grid;
+      gap: 10px;
+    }
+  }
 }
 
 footer .footer p {
