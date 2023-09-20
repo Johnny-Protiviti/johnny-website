@@ -279,7 +279,9 @@ header nav .nav-tools {
 header {
   .nav-sections {
     .nav-drop:nth-child(3) {
-      color: red;
+      & li:nth-child(3) {
+        color: red;
+      }
     }
   }
 }
