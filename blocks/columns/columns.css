@@ -34,10 +34,6 @@
 
 /* My columns styles */
 
-/* .col-color .columns > div > div {
-  background-color: aliceblue;
-} */
-
 .col-color .columns > div:nth-child(even) > div:nth-child(odd) {
   background-color: aliceblue;
 }
@@ -54,7 +50,7 @@
   background-color: aliceblue;
 }
 
-@media (max-width:901px) {
+@media (min-width:900px) {
   .col-color .columns-2-cols > div > div:nth-child(odd) {
     background-color: antiquewhite;
   }
