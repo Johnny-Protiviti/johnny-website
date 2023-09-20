@@ -34,10 +34,14 @@
 
 /* My columns styles */
 
-.col-color .columns > div > div {
+/* .col-color .columns > div > div {
+  background-color: aliceblue;
+} */
+
+.col-color .columns-2-cols > div:nth-child(even) > div:nth-child(odd) {
   background-color: aliceblue;
 }
 
-.col-color .columns-2-cols > div > div:nth-child(odd) {
+.col-color .columns-2-cols > div:nth-child(odd) > div:nth-child(odd) {
   background-color: antiquewhite;
 }
