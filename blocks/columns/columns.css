@@ -42,6 +42,14 @@
   background-color: aliceblue;
 }
 
+.col-color .columns-2-cols > div:nth-child(even) > div:nth-child(even) {
+  background-color: antiquewhite;
+}
+
 .col-color .columns-2-cols > div:nth-child(odd) > div:nth-child(odd) {
   background-color: antiquewhite;
+}
+
+.col-color .columns-2-cols > div:nth-child(odd) > div:nth-child(even) {
+  background-color: aliceblue;
 }
