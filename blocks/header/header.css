@@ -282,13 +282,14 @@ header {
       & li:nth-child(3) {
         & a {
           display: flex;
+          gap: 5px;
         }
         & svg {
           transition: translate .5s;
         }
         & a:hover {
           & svg {
-            translate: 10px
+            translate: 5px
           }
         }
       }
