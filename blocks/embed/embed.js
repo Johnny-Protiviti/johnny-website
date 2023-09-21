@@ -102,19 +102,6 @@ const loadScript = (url, callback, type) => {
 	  });
 	  block.append(wrapper);
 	} else { 
-		  const callback = (entries) => {
-			if (entries.some((e) => e.isIntersecting)) {
-			console.log('I am here');
-			observer.disconnect();
-			loadEmbed(block, link);
-		  }
-		};
-		  const options = {
-			rootMargin: `${window.innerHeight * 1.25}px 0px`
-		  };
-
-		  const oberserverTwo = new IntersectionObserver(callback, options);
-
 		  const observer = new IntersectionObserver((entries) => {
 		  if (entries.some((e) => e.isIntersecting)) {
 		  observer.disconnect();
@@ -122,7 +109,7 @@ const loadScript = (url, callback, type) => {
 		}
 	  }, 
 	  {
-		rootMargin: `${window.innerHeight * 1.25}px 0px`
+		rootMargin: `${window.innerHeight * 2}px 0px`
 	  });
 	  observer.observe(block);
 	}
