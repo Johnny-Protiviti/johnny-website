@@ -101,12 +101,28 @@ const loadScript = (url, callback, type) => {
 		loadEmbed(block, link, true);
 	  });
 	  block.append(wrapper);
-	} else {
-	  const observer = new IntersectionObserver((entries) => {
-		if (entries.some((e) => e.isIntersecting)) {
+	} else { 
+		  const callback = (entries) => {
+			if (entries.some((e) => e.isIntersecting)) {
+			console.log('I am here');
+			observer.disconnect();
+			loadEmbed(block, link);
+		  }
+		};
+		  const options = {
+			rootMargin: `${window.innerHeight * 1.25}px 0px`
+		  };
+
+		  const oberserverTwo = new IntersectionObserver(callback, options);
+
+		  const observer = new IntersectionObserver((entries) => {
+		  if (entries.some((e) => e.isIntersecting)) {
 		  observer.disconnect();
 		  loadEmbed(block, link);
 		}
+	  }, 
+	  {
+		rootMargin: `${window.innerHeight * 1.25}px 0px`
 	  });
 	  observer.observe(block);
 	}
