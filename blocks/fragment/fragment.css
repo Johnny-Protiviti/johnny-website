@@ -3,4 +3,14 @@ main {
 	.johnny-fragment {
 		background-color: rgb(233, 237, 203);
 	}
+
+	.another-johnny-fragment {
+		background-color: rgb(28, 44, 49);
+		
+		.default-content-wrapper {
+			& h2 {
+				color: rgb(239, 242, 219);
+			}
+		}
+	}
 }
