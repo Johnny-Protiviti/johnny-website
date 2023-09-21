@@ -71,7 +71,7 @@ main .embed {
 		
 		.embed-placeholder-play {
 			& button {
-				background-color: rgb(173, 124, 124, 1);
+				background-color: rgb(142, 104, 104, 1);
 			}
 		}
 	}
@@ -81,9 +81,13 @@ main .embed {
 		
 		.embed-placeholder-play {
 			& button {
-				background-color: rgb(226, 132, 196, 1);
+				background-color: rgb(193, 84, 159, 1);
 			}
 		}
+	}
+
+	.johnny-twitter {
+		background-color: rgb(229, 235, 247);
 	}
   }
 
