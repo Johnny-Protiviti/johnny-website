@@ -68,10 +68,22 @@ main .embed {
   main {
 	.johnny-vimeo {
 		background-color: antiquewhite;
+		
+		.embed-placeholder-play {
+			& button {
+				background-color: rgb(173, 124, 124, 1);
+			}
+		}
 	}
 
 	.johnny-youtube {
 		background-color: rgb(255, 219, 219, 1);
+		
+		.embed-placeholder-play {
+			& button {
+				background-color: rgb(226, 132, 196, 1);
+			}
+		}
 	}
   }
 
@@ -79,6 +91,7 @@ main .embed {
 	.embed-container {
 		.default-content-wrapper {
 			text-align: center;
+			
 			& h3 {
 				box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
 				width: fit-content;
