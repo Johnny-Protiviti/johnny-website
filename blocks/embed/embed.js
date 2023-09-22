@@ -66,8 +66,6 @@ const loadScript = (url, callback, type) => {
 	if (block.classList.contains('embed-is-loaded')) {
 	  return;
 	}
-  
-	console.log('link', link);
 
 	const EMBEDS_CONFIG = [
 	  {
