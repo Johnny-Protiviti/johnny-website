@@ -3,7 +3,6 @@
  * Show videos and social posts directly on your page
  * https://www.hlx.live/developer/block-collection/embed
  */
-
 const loadScript = (url, callback, type) => {
 	const head = document.querySelector('head');
 	const script = document.createElement('script');
@@ -55,16 +54,14 @@ const loadScript = (url, callback, type) => {
 	return embedHTML;
   };
 
-  const embedInstagram = (url) => {
-	console.log('url', url);
-	// const embedHTML = `<blockquote class="instagram-media" data-instgrm-captioned><a href="${url.href}"></a></blockquote>`;
+  const embedInstagram = (url, options) => {	
+	const embedHTML = `<blockquote class="instagram-media" ${options ? 'data-instgrm-captioned' : ''} data-instgrm-permalink="${url.href}" data-instgrm-version="14"></blockquote>`;
 	loadScript('https://www.instagram.com/embed.js');
-	const embedHTML = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="${url.href}" data-instgrm-version="14"></blockquote>`;
-	// const embedHTML = `<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="${url.href}?utm_source=ig_embed" data-instgrm-version="14"></blockquote><script async src="//www.instagram.com/embed.js"></script>`;
 	return embedHTML;
   };
   
-  const loadEmbed = (block, link, autoplay) => {
+  const loadEmbed = (block, link, options) => {
+	
 	if (block.classList.contains('embed-is-loaded')) {
 	  return;
 	}
@@ -91,7 +88,7 @@ const loadScript = (url, callback, type) => {
 	const config = EMBEDS_CONFIG.find((e) => e.match.some((match) => link.includes(match)));
 	const url = new URL(link);
 	if (config) {
-	  block.innerHTML = config.embed(url, autoplay);
+	  block.innerHTML = config.embed(url, options);
 	  block.classList = `block embed embed-${config.match[0]}`;
 	} else {
 	  block.innerHTML = getDefaultEmbed(url);
@@ -115,10 +112,11 @@ const loadScript = (url, callback, type) => {
 	  });
 	  block.append(wrapper);
 	} else { 
-		  const observer = new IntersectionObserver((entries) => {
+		 const observer = new IntersectionObserver((entries) => {
+		 const caption = block.classList.contains('captions');
 		  if (entries.some((e) => e.isIntersecting)) {
 		  observer.disconnect();
-		  loadEmbed(block, link);
+		  loadEmbed(block, link, caption);
 		}
 	  }, 
 	  {
