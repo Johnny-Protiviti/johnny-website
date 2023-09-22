@@ -54,12 +54,18 @@ const loadScript = (url, callback, type) => {
 	loadScript('https://platform.twitter.com/widgets.js');
 	return embedHTML;
   };
+
+  const embedInstagram = (url) => {
+	console.log('embedInstagram url', url);
+  };
   
   const loadEmbed = (block, link, autoplay) => {
 	if (block.classList.contains('embed-is-loaded')) {
 	  return;
 	}
   
+	console.log('link', link);
+
 	const EMBEDS_CONFIG = [
 	  {
 		match: ['youtube', 'youtu.be'],
@@ -72,6 +78,10 @@ const loadScript = (url, callback, type) => {
 	  {
 		match: ['twitter'],
 		embed: embedTwitter,
+	  },
+	  {
+		match: ['instagram'],
+		embed: embedInstagram,
 	  },
 	];
   
