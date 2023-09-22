@@ -56,9 +56,9 @@ const loadScript = (url, callback, type) => {
   };
 
   const embedInstagram = (url) => {
-	console.log('embedInstagram url', url);
-	const embedHTML = `<blockquote class="instagram-gram"><a href="${url.href}"></a></blockquote>`;
-	console.log('embedHTML', embedHTML);
+	console.log('url', url);
+	const embedHTML = `<blockquote class="instagram-media" data-instgrm-captioned><a href="${url.href}"></a></blockquote>`;
+	loadScript('https://www.instagram.com/embed.js');
 	return embedHTML;
   };
   
