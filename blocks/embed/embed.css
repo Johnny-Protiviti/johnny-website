@@ -111,3 +111,11 @@ main .embed {
 		}
 	}
   }
+
+  #facebook {
+	color: red;
+  }
+
+  iframe.instagram-media {
+	min-width: calc(100% - 5px) !important;
+  }
