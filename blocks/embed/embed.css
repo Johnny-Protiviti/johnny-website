@@ -112,8 +112,10 @@ main .embed {
 	}
   }
 
-  #facebook {
-	color: red;
+  .johnny-instagram {
+	& h2 {
+		color: red;
+	}
   }
 
   iframe.instagram-media {

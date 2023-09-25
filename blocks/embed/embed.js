@@ -113,10 +113,10 @@ const loadScript = (url, callback, type) => {
 	  block.append(wrapper);
 	} else { 
 		 const observer = new IntersectionObserver((entries) => {
-		 const caption = block.classList.contains('captions');
+		 const instaCaption = block.classList.contains('captions');
 		  if (entries.some((e) => e.isIntersecting)) {
 		  observer.disconnect();
-		  loadEmbed(block, link, caption);
+		  loadEmbed(block, link, instaCaption);
 		}
 	  }, 
 	  {
