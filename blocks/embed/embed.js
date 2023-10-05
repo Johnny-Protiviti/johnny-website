@@ -97,12 +97,14 @@ const loadScript = (url, callback, type) => {
 	block.classList.add('embed-is-loaded');
   };
   
+  const instagramObjects = [];
   export default function decorate(block) {
 	const placeholder = block.querySelector('picture');
 	const link = block.querySelector('a').href;
+	const instagramLink = link.includes('instagram');
 	block.textContent = '';
   
-	if (placeholder) {
+	if (placeholder && !instagramLink) {
 	  const wrapper = document.createElement('div');
 	  wrapper.className = 'embed-placeholder';
 	  wrapper.innerHTML = '<div class="embed-placeholder-play"><button title="Play"></button></div>';
@@ -111,6 +113,17 @@ const loadScript = (url, callback, type) => {
 		loadEmbed(block, link, true);
 	  });
 	  block.append(wrapper);
+	} else if (instagramLink) {
+		const caption = block.classList.contains('captions');
+    	instagramObjects.push({ instBlock: block, instLink: link, instCaption: caption });
+
+		if (placeholder) {
+			const wrapper = document.createElement('div');
+			wrapper.className = 'embed-placeholder';
+			wrapper.innerHTML = '<div class="embed-placeholder-play"></div>';
+			wrapper.prepend(placeholder);
+			block.append(wrapper);
+		}
 	} else { 
 		 const observer = new IntersectionObserver((entries) => {
 		 const instaCaption = block.classList.contains('captions');
@@ -124,4 +137,11 @@ const loadScript = (url, callback, type) => {
 	  });
 	  observer.observe(block);
 	}
+  }
+
+  export function instagramDelay() {
+	  instagramObjects.forEach((instagramInfo) => {
+	  console.log('insta', instagramInfo);
+	  loadEmbed(instagramInfo.instBlock, instagramInfo.instLink, instagramInfo.instCaption);
+	});
   }
