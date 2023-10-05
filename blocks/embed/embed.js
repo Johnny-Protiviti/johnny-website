@@ -119,7 +119,7 @@ const loadScript = (url, callback, type) => {
 
 		if (placeholder) {
 			const wrapper = document.createElement('div');
-			wrapper.className = 'embed-placeholder';
+			wrapper.className = 'embed-placeholder-instagram';
 			wrapper.innerHTML = '<div class="embed-placeholder-play"></div>';
 			wrapper.prepend(placeholder);
 			block.append(wrapper);
